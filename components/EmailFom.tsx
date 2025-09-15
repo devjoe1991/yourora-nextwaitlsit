@@ -257,7 +257,7 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
 
   return (
     <>
-      <form onSubmit={handleSubmit} method="POST" className="mt-2 max-w-sm">
+      <form onSubmit={handleSubmit} method="POST" className="max-w-sm">
         <div className="flex flex-col gap-2 lg:flex-row">
           <label className="sr-only" htmlFor="email-address">
             Email address

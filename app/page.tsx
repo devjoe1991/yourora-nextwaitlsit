@@ -11,22 +11,31 @@ export default function Home() {
     <>
       <Toaster />
 
-      <section className="w-screen h-dvh grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="w-screen h-dvh grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
         <div className="md:h-full h-80 bg-[#C9F9D1] relative overflow-hidden flex items-center justify-center p-4">
-          <div className="w-full h-full max-w-sm md:max-w-none flex items-center justify-center">
-            <DotLottieReact
-              src={isSuccessPage 
-                ? "https://lottie.host/351d0bb0-f160-40c7-84df-cd9b7c1d0340/ugOB1RGfak.lottie"
-                : "https://lottie.host/30f8897e-b55b-4ba4-be1a-47330bd0570e/BEgcn5OlnM.lottie"
-              }
-              loop
-              autoplay
-              style={{ width: '100%', height: '100%', maxWidth: '400px', maxHeight: '400px' }}
-            />
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-full max-w-xs sm:max-w-sm md:max-w-none flex items-center justify-center">
+              <DotLottieReact
+                src={isSuccessPage 
+                  ? "https://lottie.host/351d0bb0-f160-40c7-84df-cd9b7c1d0340/ugOB1RGfak.lottie"
+                  : "https://lottie.host/30f8897e-b55b-4ba4-be1a-47330bd0570e/BEgcn5OlnM.lottie"
+                }
+                loop
+                autoplay
+                style={{ 
+                  width: '100%', 
+                  height: '100%',
+                  maxWidth: '280px',
+                  maxHeight: '280px',
+                  objectFit: 'contain'
+                }}
+                className="md:!max-w-none md:!max-h-none"
+              />
+            </div>
           </div>
         </div>
 
-        <main className="flex flex-col gap-8 mt-8 justify-center px-6 pb-10">
+        <main className="flex flex-col gap-6 mt-4 justify-center px-6 pb-8">
           {!isSuccessPage && (
             <>
               <h1 className="font-bold tracking-tight text-zinc-900 text-4xl leading-tight md:text-6xl max-w-lg">
