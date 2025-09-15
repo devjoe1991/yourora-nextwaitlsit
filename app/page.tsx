@@ -12,7 +12,7 @@ export default function Home() {
       <Toaster />
 
       <section className="w-screen h-dvh grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
-        <div className="md:h-full h-80 bg-[#C9F9D1] relative overflow-hidden flex items-center justify-center p-4">
+        <div className="md:h-full h-80 bg-[#C9F9D1] relative overflow-hidden flex items-center justify-center p-4" style={{ minHeight: '320px' }}>
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full h-full max-w-xs sm:max-w-sm md:max-w-none flex items-center justify-center">
               <DotLottieReact
@@ -25,8 +25,8 @@ export default function Home() {
                 style={{ 
                   width: '100%', 
                   height: '100%',
-                  maxWidth: '280px',
-                  maxHeight: '280px',
+                  maxWidth: '320px',
+                  maxHeight: '320px',
                   objectFit: 'contain'
                 }}
                 className="md:!max-w-none md:!max-h-none"
