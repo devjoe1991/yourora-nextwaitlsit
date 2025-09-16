@@ -4,6 +4,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import confetti from "canvas-confetti";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import FinalPage from './FinalPage';
 
 interface EmailFormProps {
   onSuccessPageChange?: (isSuccessPage: boolean) => void;
@@ -12,6 +13,7 @@ interface EmailFormProps {
 export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) {
   const [email, setEmail] = useState<string>();
   const [showSuccessPage, setShowSuccessPage] = useState(false);
+  const [showFinalPage, setShowFinalPage] = useState(false);
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
@@ -74,6 +76,7 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
 
       if (response.ok) {
         toast.success("Thanks for the details! We'll be in touch soon! 🎉");
+        setShowFinalPage(true);
       } else {
         toast.error("Oops! Something went wrong!");
       }
@@ -85,6 +88,7 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
 
   const handleJoinAnother = () => {
     setShowSuccessPage(false);
+    setShowFinalPage(false);
     setEmail("");
     setFirstName("");
     setLastName("");
@@ -150,6 +154,8 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
         shootConfetti();
         setShowSuccessPage(true);
         onSuccessPageChange?.(true);
+      } else if (response.status === 409) {
+        toast.error("User already exists! Please use a different email.");
       } else {
         setEmail("");
         toast.error("Oops! Something went wrong!");
@@ -159,6 +165,11 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
       console.error(err);
     }
   };
+
+  if (showFinalPage) {
+    return <FinalPage onJoinAnother={handleJoinAnother} />;
+  }
+
   if (showSuccessPage) {
     return (
       <div className="mt-2 max-w-lg">

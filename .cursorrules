@@ -1,0 +1,38 @@
+# Cursor Rules for YourOra Waitlist Project
+
+## Project Configuration
+- Use pnpm as the package manager
+- This project uses Supabase CLI instead of global MCP
+- Use Supabase SSR for authentication (not the deprecated auth helpers)
+
+## Supabase Configuration
+- Use @supabase/supabase-js and @supabase/ssr packages
+- Environment variables are in .env.local
+- Use Supabase CLI for database operations
+- Do not use global MCP Supabase tools in this project
+
+## Code Style
+- Use TypeScript
+- Follow Next.js 14+ patterns
+- Use Tailwind CSS for styling
+- Prefer server components when possible
+
+## Dependencies
+- Always use pnpm for package management
+- Supabase SSR for authentication
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+
+## File Structure
+- API routes in app/api/
+- Components in components/
+- Types in types/
+- Environment variables in .env.local
+
+## Important Notes
+- Do not use global MCP Supabase tools
+- Use Supabase CLI for database operations
+- The deprecated @supabase/auth-helpers is not used
+- Use @supabase/ssr for server-side rendering with Supabase
+
