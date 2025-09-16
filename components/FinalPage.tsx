@@ -13,7 +13,7 @@ export default function FinalPage({ onJoinAnother }: FinalPageProps) {
   const faqs = [
     {
       question: "When will Your Ora be available?",
-      answer: "We're working hard to bring you the best experience possible. We'll be launching in Q2 2024 with early access for our waitlist members. You'll be the first to know!"
+      answer: "We're working hard to bring you the best experience possible. You'll be the first to know!"
     },
     {
       question: "What makes Your Ora different?",
@@ -54,49 +54,35 @@ export default function FinalPage({ onJoinAnother }: FinalPageProps) {
 
       {/* Engaging Content Section */}
       <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 mb-8">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-3xl font-bold text-zinc-900 mb-4">
-              Why Your Ora is Different
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-zinc-900">Progress Over Perfection</h3>
-                  <p className="text-gray-600 text-sm">Celebrate every small win and consistent effort, not just perfect results.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-zinc-900">Real Community</h3>
-                  <p className="text-gray-600 text-sm">Connect with people on similar journeys who understand the real struggles.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm">✓</span>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-zinc-900">Gentle Guidance</h3>
-                  <p className="text-gray-600 text-sm">No shame, no judgment - just supportive guidance for your unique journey.</p>
-                </div>
-              </div>
+        <h2 className="text-3xl font-bold text-zinc-900 mb-6 text-center">
+          Why Your Ora is Different
+        </h2>
+        <div className="space-y-4 max-w-2xl mx-auto">
+          <div className="flex items-start gap-3">
+            <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-white text-sm">✓</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-zinc-900">Progress Over Perfection</h3>
+              <p className="text-gray-600 text-sm">Celebrate every small win and consistent effort, not just perfect results.</p>
             </div>
           </div>
-          <div className="flex justify-center">
-            <div className="w-64 h-64">
-              <DotLottieReact
-                src="https://lottie.host/351d0bb0-f160-40c7-84df-cd9b7c1d0340/ugOB1RGfak.lottie"
-                loop
-                autoplay
-                style={{ width: '100%', height: '100%' }}
-              />
+          <div className="flex items-start gap-3">
+            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-white text-sm">✓</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-zinc-900">Real Community</h3>
+              <p className="text-gray-600 text-sm">Connect with people on similar journeys who understand the real struggles.</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <span className="text-white text-sm">✓</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-zinc-900">Gentle Guidance</h3>
+              <p className="text-gray-600 text-sm">No shame, no judgment - just supportive guidance for your unique journey.</p>
             </div>
           </div>
         </div>

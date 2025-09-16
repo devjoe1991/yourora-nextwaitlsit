@@ -11,13 +11,14 @@ interface EmailFormProps {
 }
 
 export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) {
-  const [email, setEmail] = useState<string>();
+  const [email, setEmail] = useState<string>("");
   const [showSuccessPage, setShowSuccessPage] = useState(false);
   const [showFinalPage, setShowFinalPage] = useState(false);
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
   const [otherGoalText, setOtherGoalText] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const fitnessGoals = [
     "Body Positivity",
@@ -59,6 +60,31 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
   const handleSuccessSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
+    if (isSubmitting) return; // Prevent multiple submissions
+    setIsSubmitting(true);
+    
+    // Debug logging
+    console.log("Form submission data:", {
+      email,
+      firstName,
+      lastName,
+      selectedGoals,
+      otherGoalText
+    });
+
+    // Validate required fields
+    if (!email || !email.trim() || !firstName || !firstName.trim() || !lastName || !lastName.trim()) {
+      toast.error("Please fill in all required fields!");
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (selectedGoals.length === 0) {
+      toast.error("Please select at least one fitness goal!");
+      setIsSubmitting(false);
+      return;
+    }
+    
     try {
       const response = await fetch("/api/submit-details", {
         method: "POST",
@@ -74,15 +100,21 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
         }),
       });
 
+      console.log("Response status:", response.status);
+      
       if (response.ok) {
         toast.success("Thanks for the details! We'll be in touch soon! 🎉");
         setShowFinalPage(true);
       } else {
-        toast.error("Oops! Something went wrong!");
+        const errorText = await response.text();
+        console.error("Server error:", errorText);
+        toast.error(`Oops! Something went wrong: ${response.status}`);
       }
     } catch (err) {
-      console.error(err);
-      toast.error("Oops! Something went wrong!");
+      console.error("Network error:", err);
+      toast.error("Network error! Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -149,7 +181,7 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
       });
 
       if (response.ok) {
-        setEmail("");
+        // Don't clear email - we need it for profile completion
         toast.success("Thank you for joining our waitlist! 🚀");
         shootConfetti();
         setShowSuccessPage(true);
@@ -157,12 +189,11 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
       } else if (response.status === 409) {
         toast.error("User already exists! Please use a different email.");
       } else {
-        setEmail("");
         toast.error("Oops! Something went wrong!");
       }
     } catch (err) {
-      setEmail("");
       console.error(err);
+      toast.error("Oops! Something went wrong!");
     }
   };
 
@@ -249,9 +280,10 @@ export default function EmailForm({ onSuccessPageChange }: EmailFormProps = {}) 
           <div className="flex flex-col sm:flex-row gap-3">
             <button
               type="submit"
-              className="flex-1 h-10 rounded-lg bg-[#000F2D] px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-zinc-700"
+              disabled={isSubmitting}
+              className="flex-1 h-10 rounded-lg bg-[#000F2D] px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-zinc-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Complete Setup
+              {isSubmitting ? "Completing..." : "Complete Setup"}
             </button>
             <button
               type="button"
