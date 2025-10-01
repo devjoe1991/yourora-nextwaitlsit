@@ -1,7 +1,7 @@
-# Your Ora Waitlist System - Complete Workflow
+# Miha Waitlist System - Complete Workflow
 
 ## Overview
-This document outlines the complete waitlist system for Your Ora, including database schema, user flow, and technical implementation.
+This document outlines the complete waitlist system for Miha, including database schema, user flow, and technical implementation.
 
 ## Database Schema
 
@@ -106,7 +106,7 @@ alter table public.waitlist disable row level security;
 ### Stage 3: Final Page
 1. **User sees comprehensive final page** with:
    - Success confirmation
-   - Engaging content about Your Ora's mission
+   - Engaging content about Miha's mission
    - Interactive FAQ section
    - Call-to-action buttons
 2. **User can**:

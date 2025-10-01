@@ -12,20 +12,20 @@ export default function FinalPage({ onJoinAnother }: FinalPageProps) {
 
   const faqs = [
     {
-      question: "When will Your Ora be available?",
+      question: "When will Miha be available?",
       answer: "We're working hard to bring you the best experience possible. You'll be the first to know!"
     },
     {
-      question: "What makes Your Ora different?",
-      answer: "Unlike other fitness apps that focus on perfection, Your Ora celebrates progress. We believe in showing up consistently rather than being perfect. Our community supports each other through real journeys, not just highlight reels."
+      question: "What makes Miha different?",
+      answer: "Unlike other fitness apps that focus on perfection, Miha celebrates progress. We believe in showing up consistently rather than being perfect. Our community supports each other through real journeys, not just highlight reels."
     },
     {
       question: "Is there a cost to join?",
-      answer: "Joining the waitlist is completely free! We'll announce pricing details closer to launch, but we're committed to making Your Ora accessible to everyone who wants to start their fitness journey."
+      answer: "Joining the waitlist is completely free! We'll announce pricing details closer to launch, but we're committed to making Miha accessible to everyone who wants to start their fitness journey."
     },
     {
       question: "What if I'm a complete beginner?",
-      answer: "Perfect! Your Ora is designed for everyone, especially beginners. We provide gentle guidance, celebrate small wins, and connect you with a supportive community that understands that everyone starts somewhere."
+      answer: "Perfect! Miha is designed for everyone, especially beginners. We provide gentle guidance, celebrate small wins, and connect you with a supportive community that understands that everyone starts somewhere."
     },
     {
       question: "How do I get early access?",
@@ -47,7 +47,7 @@ export default function FinalPage({ onJoinAnother }: FinalPageProps) {
           </span>
         </h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Welcome to the Your Ora community! You're now part of a movement that celebrates progress over perfection. 
+          Welcome to the Miha community! You're now part of a movement that celebrates progress over perfection. 
           Get ready to transform your fitness journey with a supportive community that believes in showing up, not being perfect.
         </p>
       </div>
@@ -55,7 +55,7 @@ export default function FinalPage({ onJoinAnother }: FinalPageProps) {
       {/* Engaging Content Section */}
       <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 mb-8">
         <h2 className="text-3xl font-bold text-zinc-900 mb-6 text-center">
-          Why Your Ora is Different
+          Why Miha is Different
         </h2>
         <div className="space-y-4 max-w-2xl mx-auto">
           <div className="flex items-start gap-3">
@@ -130,7 +130,7 @@ export default function FinalPage({ onJoinAnother }: FinalPageProps) {
             Join with Another Email
           </button>
           <a
-            href="https://twitter.com/yourora"
+            href="https://twitter.com/miha"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zinc-900 transition-colors"

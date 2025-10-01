@@ -1,16 +1,16 @@
-# Your Ora - Waitlist
+# Miha - Waitlist
 
-![Your Ora Preview](./preview.png)
+![Miha Preview](./preview.png)
 
 ## Join the Waitlist
 
-Welcome to **Your Ora** - the social layer of everyday effort. 
+Welcome to **Miha** - the social layer of everyday effort. 
 
 Turn every small win into a celebration. Join thousands building better habits through daily posts, supportive streaks, and a community that actually cheers you on. No judgment, just progress.
 
-### What is Your Ora?
+### What is Miha?
 
-Your Ora is where your daily effort becomes someone else's inspiration. Share your journey, build unbreakable streaks, and watch your small actions create ripples of motivation across a community that believes in progress over perfection.
+Miha is where your daily effort becomes someone else's inspiration. Share your journey, build unbreakable streaks, and watch your small actions create ripples of motivation across a community that believes in progress over perfection.
 
 ### Features Coming Soon
 
@@ -22,9 +22,9 @@ Your Ora is where your daily effort becomes someone else's inspiration. Share yo
 
 ### Join the Waitlist
 
-Ready to turn your daily efforts into inspiration? Join our waitlist and be the first to know when Your Ora launches!
+Ready to turn your daily efforts into inspiration? Join our waitlist and be the first to know when Miha launches!
 
-[Visit the waitlist page](https://yourora.co) to sign up.
+[Visit the waitlist page](https://miha.co) to sign up.
 
 ---show me the success page and the confetti woring wiwhen the button is pushed so that i can see it on the front end 
 

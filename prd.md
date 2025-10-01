@@ -1,11 +1,11 @@
-# Your Ora - Product Requirements Document (Enhanced)
+# Miha - Product Requirements Document (Enhanced)
 
 ---
 
 ## 1. Vision & Principles
 
 **Vision:**  
-Build the social layer of everyday effort. Your Ora turns each workout or positive habit into a proud, judgment-free daily post that fuels accountability via streaks and community.
+Build the social layer of everyday effort. Miha turns each workout or positive habit into a proud, judgment-free daily post that fuels accountability via streaks and community.
 
 **Product Principles:**
 - **Effort > Aesthetics:** We reward showing up, not perfection. A quick selfie after a walk or a screenshot of a finished workout is more valuable than a heavily edited gym photo.  
@@ -22,7 +22,7 @@ Build the social layer of everyday effort. Your Ora turns each workout or positi
 The fitness journey is often a lonely one. Motivation wanes, and without a reliable support system, even the best intentions can fail. Many social platforms focus on aspirational, "finish-line" content, which can feel intimidating and discouraging for people just starting out. There's no dedicated space to share and celebrate the small, daily acts of effort that truly build a consistent habit.
 
 **The Solution:**  
-Your Ora is a streak-driven, fitness-first social app that leverages the power of social accountability and social proof to keep users engaged and consistent. By posting daily proof of effort, users not only track their personal progress but also contribute to a collective environment of positive action.  
+Miha is a streak-driven, fitness-first social app that leverages the power of social accountability and social proof to keep users engaged and consistent. By posting daily proof of effort, users not only track their personal progress but also contribute to a collective environment of positive action.  
 
 Each user's post, no matter how small, serves as a ripple effect—a **"butterfly effect" of motivation**—inspiring their followers and the wider community to show up and keep their own streaks alive.  
 

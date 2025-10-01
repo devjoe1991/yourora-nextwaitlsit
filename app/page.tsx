@@ -31,7 +31,7 @@ export default function Home() {
             <>
               <h1 className="font-bold tracking-tight text-zinc-900 text-4xl leading-tight md:text-6xl max-w-lg">
                 <span className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-                  Your Ora
+                  Miha
                 </span>
               </h1>
               <p className="text-gray-500">
